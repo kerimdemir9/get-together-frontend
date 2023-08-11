@@ -2,19 +2,26 @@ import {Link} from "react-router-dom";
 import {Container} from "@mui/material";
 import {Card} from "primereact/card";
 import {Button} from "primereact/button";
+import {useGlobalContext} from "../Context/GlobalContext";
+import ProfilePage from "./ProfilePage";
+import {useEffect} from "react";
 
 const Home = () => {
+    const { isLogin, setIsLogin } = useGlobalContext();
+
     return (
         <div className="App-header">
             <Container maxWidth="sm">
-                <Card title="Register">
-                    <Link to="/register">
-                        <Button className="p-button" label="Register"/>
-                    </Link>
-                    <Link to="/login">
-                        <Button className="p-button" label="Login"/>
-                    </Link>
-                </Card>
+                {!isLogin
+                    ? (<Card title="Welcome">
+                        <Link to="/register">
+                            <Button className="p-button" label="Register"/>
+                        </Link>
+                        <Link to="/login" style={{ marginLeft: '10px' }}>
+                            <Button className="p-button" label="Login"/>
+                        </Link>
+                    </Card>)
+                    : (<ProfilePage/>)}
             </Container>
         </div>
     )
