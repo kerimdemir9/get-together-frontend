@@ -38,9 +38,7 @@ const Login = () => {
         try {
             const response = await axios.get("http://localhost:8888/v1/user/find_by_user_name/" + userName);
             setLoginError(false);
-            console.log("response: ", response);
             const data = response.data;
-            console.log(data);
             if(data.password === password) {
                 setIsLogin(true);
             }
@@ -52,9 +50,8 @@ const Login = () => {
             setPassword("");
             setError1(false);
             setError2(false);
-            console.clear();
         } catch (error) {
-            if(error.response.status && error.response.status === 404) {
+            if(error.response && error.response.status && error.response.status === 404) {
                 setLoginError(true);
             }
             console.error(error);
