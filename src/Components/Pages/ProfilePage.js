@@ -6,7 +6,7 @@ const ProfilePage = () => {
     const { setIsLogin } = useGlobalContext();
 
     return (
-        <div>
+        <div className="p-panel">
             Hello, You are logged in successfully!!!
             <br/>
             <div className="p-inputwrapper">
