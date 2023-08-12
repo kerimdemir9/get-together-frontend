@@ -4,10 +4,9 @@ import {Card} from "primereact/card";
 import {Button} from "primereact/button";
 import {useGlobalContext} from "../Context/LoginContext";
 import ProfilePage from "./ProfilePage";
-import {useEffect} from "react";
 
 const Home = () => {
-    const { isLogin, setIsLogin } = useGlobalContext();
+    const { isLogin } = useGlobalContext();
 
     return (
         <div className="App-header">

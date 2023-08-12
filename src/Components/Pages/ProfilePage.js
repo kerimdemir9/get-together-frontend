@@ -3,7 +3,7 @@ import {Button} from "primereact/button";
 
 
 const ProfilePage = () => {
-    const { isLogin, setIsLogin } = useGlobalContext();
+    const { setIsLogin } = useGlobalContext();
 
     return (
         <div>
