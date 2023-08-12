@@ -44,15 +44,20 @@ const Login = () => {
             if(data.password === password) {
                 setIsLogin(true);
             }
+            else {
+                setLoginError(true);
+                return;
+            }
             setUserName("");
             setPassword("");
             setError1(false);
             setError2(false);
             console.clear();
         } catch (error) {
-            setLoginError(true);
+            if(error.response.status && error.response.status === 404) {
+                setLoginError(true);
+            }
             console.error(error);
-            console.log("Error code: ", error.response);
         }
     }
 
