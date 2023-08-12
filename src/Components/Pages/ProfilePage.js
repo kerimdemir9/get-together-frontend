@@ -1,4 +1,4 @@
-import {useGlobalContext} from "../Context/GlobalContext";
+import {useGlobalContext} from "../Context/LoginContext";
 import {Button} from "primereact/button";
 
 
@@ -9,7 +9,7 @@ const ProfilePage = () => {
         <div>
             Hello, You are logged in successfully!!!
             <br/>
-            <div className="p-button">
+            <div className="p-inputwrapper">
                 <Button onClick={() => setIsLogin(false)}>Log out</Button>
             </div>
         </div>

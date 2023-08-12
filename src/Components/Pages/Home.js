@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import {Container} from "@mui/material";
 import {Card} from "primereact/card";
 import {Button} from "primereact/button";
-import {useGlobalContext} from "../Context/GlobalContext";
+import {useGlobalContext} from "../Context/LoginContext";
 import ProfilePage from "./ProfilePage";
 import {useEffect} from "react";
 

@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Components/Pages/Login";
 import Register from "./Components/Pages/Register";
 import Home from "./Components/Pages/Home";
-import {GlobalProvider} from "./Components/Context/GlobalContext";
+import {GlobalProvider} from "./Components/Context/LoginContext";
 
 
 function App() {

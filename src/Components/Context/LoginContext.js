@@ -1,15 +1,15 @@
 import React, { createContext, useContext, useState } from 'react';
 
-const GlobalContext = createContext();
+const LoginContext = createContext(undefined);
 
 export const GlobalProvider = ({ children }) => {
     const [isLogin, setIsLogin] = useState(false);
 
     return (
-        <GlobalContext.Provider value={{ isLogin, setIsLogin }}>
+        <LoginContext.Provider value={{ isLogin, setIsLogin }}>
             {children}
-        </GlobalContext.Provider>
+        </LoginContext.Provider>
     );
 };
 
-export const useGlobalContext = () => useContext(GlobalContext);
+export const useGlobalContext = () => useContext(LoginContext);
