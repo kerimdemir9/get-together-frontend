@@ -50,10 +50,9 @@ const Login = () => {
             setError2(false);
             console.clear();
         } catch (error) {
-            //if(error.response.status === 404)
             setLoginError(true);
             console.error(error);
-            console.log("Error code: ", error.response.status);
+            console.log("Error code: ", error.response);
         }
     }
 
