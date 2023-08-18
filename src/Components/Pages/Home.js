@@ -12,7 +12,7 @@ const Home = () => {
         <div className="App-header">
             <Container maxWidth="sm">
                 {!isLogin
-                    ? (<Card title="Welcome">
+                    ? (<Card title="Welcome" className="p-align-center">
                         <Link to="/register">
                             <Button className="p-button" label="Register"/>
                         </Link>

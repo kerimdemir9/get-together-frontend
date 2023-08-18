@@ -1,5 +1,6 @@
 import {useGlobalContext} from "../Context/LoginContext";
 import {Button} from "primereact/button";
+import {Container} from '@mui/material';
 
 
 const ProfilePage = () => {
@@ -7,11 +8,13 @@ const ProfilePage = () => {
 
     return (
         <div className="p-panel">
-            Hello, You are logged in successfully!!!
-            <br/>
-            <div className="p-inputwrapper">
-                <Button onClick={() => setIsLogin(false)}>Log out</Button>
-            </div>
+            <Container>
+                Hello, You are logged in successfully!!!
+                <br/>
+                <div className="p-inputwrapper">
+                    <Button onClick={() => setIsLogin(false)}>Log out</Button>
+                </div>
+            </Container>
         </div>
     )
 }

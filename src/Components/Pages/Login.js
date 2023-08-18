@@ -54,6 +54,7 @@ const Login = () => {
             if(error.response && error.response.status && error.response.status === 404) {
                 setLoginError(true);
             }
+            // TODO need to remove when published
             console.error(error);
         }
     }
